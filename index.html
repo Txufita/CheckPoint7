@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <link rel="stylesheet" href="index.css">
+
+
+<head>
+  <meta charset='UTF-8'>
+  <title>CheckPoint7</title>
+<body>
+<h1>CheckPoint7 - Preguntas teóricas</h1>
+<h2>¿Qué diferencia a Javascript de cualquier otro lenguaje de programación?</h2>
+<p>Es el único lenguaje de programación, que de hecho puede ser entendido por el navegador.</p>
+<p>Es el lenaguaje de la web, si necesitas programar en un navegdor web, necesitas JavaScript. Esto hace que puedas construir aplicaciones web muy dinamicas como por ejemplo: gmail, facebook, twitter
+Es un lengaje mut apropiado para construir apliaciones para el movil.</p>
+<p>Es uno de los lenguajes de progamamcion mas poderosos para automtaizar tus taeras diarias.</p>
+<h2>¿Cuáles son algunos tipos de datos JS?</h2>
+<p>Los tipos de datos son la manera en la que JavaScript ve el tipo de variable que tenemos, puede ve un número,una frase.</p>
+
+<p><b>Tipos de datos Boolean</b></p>
+<p> Boolean tiene 2 valores potenciales: verdadero o falso</p>
+
+<code> var verdad = true;
+var mentira = false; </code>
+<code> console.log(verdad);</code>
+<p>salida: true</p>
+
+<p>Los valores booleanos se utilizan para indicar estados. Sólo hay 2 valores: “true” o “false”, y un Boolean sólo puede ser esos dos valores. Sirven para cuando por ejmeplo estás creando una aplicación y quieres saber qué usuarios están registrados y cuáles no.
+Podemos escribir en nuestro código. Es un usuario registrado = “true”, y después con condicionales lo hacemos más dinámico.</p>
+
+<p><b>Null</b></p>
+
+<p>Es la ausencia de cualquier valor. Sólo puedes tener un valor que es: “null”. Significa que esa variabe está vacía, que podría haber un valor pero está vacía. Por ejemplo en una aplicación, cuando un usuario deja un campo sin rellenar, como Apellido, no indica nada, lo deja vacío.</p>
+
+<code> var nulo = null;
+console.log(nulo);</code>
+
+<p>Salida: null</p>
+
+<p><b>UNDEFINED</b></p>
+
+<p>Este tipo de dato se utiliza cuando el valor de una variable aun no ha sido definido o no existe.</p>
+
+<code>var dato;
+console.log(dato);</code>
+
+<p>Salida: undefined</p>
+
+<p>Por defecto, cuando declaras una variable JavaScript la establece como “undefined”.</p>
+<p>Es útil porque permite, por ejemplo, comprobar si este valor ya está definido.</p>
+
+<p><b>Diferencias entre “null” y “undefined”</b<</p>
+
+<p>“null” significa que está definido. Tiene acceso a esa variable, pero está vacía. No hay nada, mientras que “undefined” significa que aún no se ha asignado, por lo que no está vacía. Literalmente, aún no hay ningún valor; debe asignarse más adelante.</p>
+
+<p><b>NUMBER</b></p>
+
+<p>Sirve para almacenar valores numéricos. Son utilizados para contar, hacer cálculos y comparaciones.</p>
+
+<code>Var age = 51;
+Console.log(age);</code>
+<p>Salida : 51</p>
+
+<p>En JavaScript no tenemos que definir el tipo de dato que es la variable, en otros lenviages si. En otros lenaguage hubieramos tenido que decir: var age = number = 51</p>
+
+<p><b>STRING</b></p>
+
+<p>Son frases, palabras.</p>
+
+<code>var name = “Txufi”;
+var city = ‘Getxo’;
+
+console.log(name);
+console.log(city);</code>
+
+<p>Salida:
+
+“Txufi”
+“Getxo”</p>
+
+<p>Como se puede ver, se pueden definir entre dobles o simples comillas (en la mayoría de los casos).</p>
+
+<h2>¿Cuáles son las tres funciones de String en JS?</h2>
+
+<p>Las funciones nos permiten encapsular un comportamiento, tener un objecto, y con el o bien cambiarlo o realizar algun tipo de consulta de valor y tambien relaizar ua tarea una vez tras otra sin tener que repetir código.</p>
+
+<p></p>Con el tipo de datos “string” podemos utilizar las siguients funciones:</p>
+
+<h3>charAt</h3>
+
+<code>var str = “los domingos hago los deberes”;
+str.charAt(2);</code>
+<p>Salida: “s”</p>
+
+<p>con esto estamos pidiendo lo que sea que esté en el index 2, que en este caso es la “s”</p>
+
+<p>Si por ejmplo nos pasamos de index:</p>
+
+<code>var str = “los domingos hago los deberes”;
+str.charAt(45);</code>
+
+<p>sallida: “”</p>
+
+<p>Nos devuelve un “string” vacío.
+Pero hay que tener cuidado, porque sale algo parecido:</p>
+
+<code>var str = “los domingos hago los deberes”;
+str.charAt(3);</code>
+
+<p>Salida: " "
+Que nos devuelve un espacio.</p>
+
+<h3>CONCAT"</h3>
+
+<code>ar str = “los domingos hago los deberes”;
+str.concat(" y no libro uno ");</code>
+
+<p>salida: "los domingo hago los deberes y no libro uno "</p>
+
+<p>Añade el contenido al final del “string”</p>
+
+<p>Pero, importante,no cambia el valor del “string”, sólo cambia el valor que nos devuelve cuando utilizamos la funcion con el “sring”</p>
+<p>Si quisieramos cambiar el valor tendiramos que hacer algo asi: </p>
+
+<code>var str = “los domingos hago los deberes”;
+
+var newstr = str.concat(" y no libro uno ");
+
+newstr;</code>
+
+<p>Salida: "los domingos hago los deberes y no libro uno "</p>
+
+<h2>Icludes</h2>
+
+<p>Para saber si un valorestá incluido en un “sting”</p>
+
+<code>var str = “los domingos hago los deberes”;
+
+str.includes(“domingos”);</code>
+
+<p>salida: true</p>
+
+<code>str.includes(“suelo”);</code>
+
+<p>Salida: false</p>
+
+<p>Sólo devuelve “true” o “false”</p>
+
+<h3>ENDSWITH Y STARTSWITH</h3>
+
+<p>También nos van a dar sólo los valores “true” o “false”.
+
+startswith, sólo va a mirar la primera palabra a ver si encaja con el valor buscado.</p>
+
+<code>var str = “los domingos hago los deberes”;
+
+str.startsWith(‘los’); </code>
+<p>Salida: true</p>
+
+<p>Si pusieramos</p> <code<str.startsWith(‘s’);</code>
+
+<p>tambien nos da “true”</p>
+
+<h3>ENDSWITH</h3>
+
+<p>Lo mismo que startsWith pero con el último elemento del “string”.</p>
+
+<code>var str = “los domingos hago los deberes”;
+
+str.endsWith(‘dog’);</code>
+
+<p>Salida: false</p>
+
+<h3>REPEAT</h3>
+
+<code>var str = “los domingos hago los deberes”;
+
+str.repeat(59);<code>
+
+<p<Salida:“los domingos hago los debereslos domingos hago los debereslos domingos hago los debereslos domingos hago los debereslos domingos hago los deberes”</p>
+
+<p>Repite el “string” tantas veces como queramos.
+Una vez mas, el valos de la variable no cambia, solo la funcion nos devuelve un set de valores diferentes, pero el “string” sigue manteniendo su valor. Si queremos utilizar el valor/valores que la funcion nos devuelve, debemos almacenar ese resultado en una variable nueva.</p>
+
+<h3>MATCH</h2>
+
+<p>Se utiliza con “Regular Expressions” para sobre todo para validar “webforms”</p>
+
+<code>"(555) 555-5555".match(/(((\d{3}) ?)|(\d{3}-))?\d{3}-\d{4}/);</code> <p> (esto es la “Regular Expression” para un número de teléfono)</p>
+<p>salida:</p> <code>(4) (4) [“555-555-5555”, “555-”, undefined, “555-”, index: 0, input: “555-555-5555”]0: "555-555-5555"1: "555-"2: undefined3: "555-"index: 0input: "555-555-5555"length: 4__proto__: Array(0)</code>
+
+<h3>REPLACE</h3>
+
+<code>var str = “los domingos hago los deberes”;
+
+str.replace(“domingos”, “sabados”);>/code> <p>=> "domingos es el elemento que bucamos, y “sabados” el elemento por el que loqueremos cambiar.</p>
+
+<p>Sustituye un elemento por otro del “string”.</p>
+
+<h3>INDEXOF</h3>
+
+<p>Busca el index de un elemento.</p>
+
+<code>var str = “los domingos hago los deberes”;
+
+str.indexOf(‘hago’);</code>
+
+<p></p>Salida: 13</p>
+
+<code>var str = “los domingos hago los deberes”;
+
+var str2 = str.concat(" todos los domingos");
+str2.indexOf()</code>
+<p>Salida: 4</p>
+
+<p>Te da el index del primer elemento que coincide con la búsqueda.</p>
+
+<h3>LASTINDEXOF</h3>
+
+<p>Funciona igual que el anterior, pero te devuelve el último “index”. Pasa por todos los elementos, y te devuelve el último.
+
+Si queremos que nos devuelva todos los “index” de ese elemtno tendremos que utilizar “match”</p>
+
+<h3>SLICE</h3>
+
+<p>Nos devuelve todos los elementos a la derecha de ese “index”</p>
+
+<code>var str = “los domingos hago los deberes”;
+
+str.slice(3);</code>
+
+<p>Salida: " domingos hago los deberes"</p>
+
+<code>var str = “los domingos hago los deberes”;
+
+str.slice(-7);</code>
+
+<p>Salida: “los domingos hago los”</p>
+
+<p>Si ponemos un valor negativo, nos devuelve lo que queda a la izquierda.</p>
+
+<p>Si queremos un elemento del medio del “string”</p>
+
+<code>var str = “los domingos hago los deberes”;
+
+str.slice(4, 11);</code>
+
+<p>Salida: “domingos”</p>
+
+<h3>TRIM</h3>
+
+<p>Con “trim” podemos limpiar el código</p>
+
+<code>var str = " los domingos hago los deberes ";
+
+str.trim ();</code>
+
+<p>Salida: “los domingos hago los deberes”</p>
+
+<h3>TOUPPERCASE Y TOLOWERCASE</h3>
+
+<p>Para poner en mayúsculas o minusculas</p>
+
+<code>var str = “Los Domingos Hago Los Deberes”;
+
+str.toUpperCase();
+str.toLowerCase();</code>
+
+<p>Salida: “LOS DOMINGOS HAGO LOS DEBERES”</p>
+<p>Salida: “los domingos hago los deberes”</p>
+
+<h2></h2>¿Qué es un condicional?</h2>
+
+<p>Los condicionales son de las cosas mas importantes en cualquier lenguage de programacion.
+
+Dan dinamismo al programa.
+
+Nos permiten ejecutar una secuencia de instrucciones u otra diferente dependiendo de lo que estemos comprobando. Permiten establecer el flujo de ejecución de los programas de acuerdo a determinados estados.</p>
+
+<h3>IF</h3>
+
+<code>var apples = 4;
+var oranges = 8;
+
+if(apples==oranges) {
+console.log(“too much fruit”);
+}</code>
+<p>Si se cumple la condición dentro del paréntesis, se ejecuta el bloque de código incluído en las llaves.</p>
+
+<p>si en lugar de “applesoranges" indicamos "apples=oranges” Estamos pidiendo que tanto el valor como el tipo de dato coincidan.</p>
+
+<code>var apples = 4;
+var oranges = 8;
+
+if(apples!==oranges) {
+console.log(“not equal”);
+}</code>
+
+<p>con los símbolos: !== : indicamos que “no es igual”</p>
+<p>con los símbolos: >= : indicamos que “mayor o igual”</p>
+<p>con los símbolos: <= : indicamos que “menor o igual”</p>
+
+<h3>ELSE</h3>
+
+<code>var age = 51;
+if (age<12) {
+console.log(“puedes elegir una piñata”);
+} else {
+console.log(“puedes pagar una piñata”);
+}</code>
+
+<p>Si se cumple la condición se ejecuta el bloque de código 1, y si a condicion a evaluar no se cumple, se ejecuta el bloque de código 2.</p>
+
+<h3>IF/ELSE IF</h3>
+
+<p>Por último,si queremos realizar varias comprobaciones podemos concatenar varias sentencias if.else if…y se irán comprobando en orden.</p>
+
+<code>var age = 51;
+
+if(age<10) {
+console.log(“puedes elegir una piñata”);
+} else if(age>50)
+console.log(“puedes pagar una piñata”);
+else if (age==40) {
+console.log(“te ha tocado una piañata”);
+} else {
+console.log(“es una tienda de piatas”)
+}</code>
+
+p>Se comprueba la condición 1, si se cumple,se ejecuta el bloque 1 y si no, se comprueba si cumple la condición 2 en cuyo caso se ejecutaría el bloque 2, y así sucesivamente hasta que encuentre una condición que se cumpla o se ejecute el bloque 4 del último “else”</p>
+
+<h3>COMPOUND</h3>
+
+<code>var age = 8;
+
+if (age <= 10) {
+console.log(“tienes que hacer los deberes”);
+console.log(“la merienda es a las 18 horas”);
+console.log(“puedes ver la tele”);
+} else if (age >= 10 && age < 25) {
+console.log(“tienes que estudiar”);
+console.log(“tienes que hacer deporte”);
+console.log(“puedes viajar barato”);
+}</code>
+
+<p>Salida:</p>
+
+<p>“tienes que hacer los deberes”</p>
+<p>“la merienda es a las 18 horas”</p>
+<p>“puedes ver la tele”</p>
+
+<p>El programa va a chequear la condicion de la izquerda, si es “true” va a comprobar la de la derecha, si es “true” se ejecutará todo loque esta dentro de las llaves.</p>
+
+<h3>SWITCH</h3>
+
+<p>Con Switch podemos sustituir un conjunto de sentencias “if-else” de una manera más legible. Se comprueba la condición, y según el caso que devuelva, ejecutará un bloque u otro.
+Para poder separar los bloques, se utiliza la palabra “break” que permite salir de toda la sentencia.</p>
+
+<code>var data = “Hola”;</code>
+
+<p>Nuestro programa mostrará el tipo de dato de ese valor específico y de la variable. La sintaxis es usar switch y luego escribir el tipo de valor deseado. En mi caso, quiero usar type of data.Si abro la consola y digo `typeof ‘Hola’, esto indicará que es una cadena.
+
+Luego, escribiremos llaves y, dentro de ellas, crearemos nuestros escenarios.</p>
+
+<code>var dataPoint = {};
+
+switch (typeof dataPoint) {
+case “string”:
+console.log(“It’s a string”);
+break;
+case “number”:
+console.log(“It’s a number”);
+break;
+case “boolean”:
+console.log(“It’s a boolean”);
+break;
+default:
+console.log(‘No matches’);
+}</code>
+
+<h2>¿Qué es un operador ternario?</h2>
+
+<p>Consiste en escribir una condicional entera en una sóla línea de código. Se utiliza para poder usar después ese codigo en otros programas.</p>
+
+<code<function ageVerification(age) {
+
+return age > 18 ? "puedes votar" : "tienes que esperar para poder votar";
+}
+
+ageVerification(51);
+ageVerification(16);</code>
+
+<p>Salida:</p>
+<p>“puedes votar”</p>
+<p>“tienes que esperar para poder votar”</p>
+
+<p>age > 18 es la condicional</p>
+<p>“puedes votar” es el resultado para “true”</p>
+<p>“tienes que esperar para poder votar” es el resultado para “false”</p>
+
+<h2>¿Cuál es la diferencia entre una declaración de función y una expresión de función?</h2>
+
+<h3>Una declaración de función:
+
+<code>function domingoDos(){
+return "Hoy tocan mas deberes";
+}</code>
+<h3>Una expresión de función es una funcion que se almacena en una variable:</h3>
+
+<code></code>var domingo = function () {
+return 'Hoy toca deberes';
+};</code>
+
+<p>Se cierran con punto y coma, cosa que nos puede dar una pista cuando lo veamos escrito en el programa de otra persona.
+
+No se pone nombre a la función, por eso tambien se les llama funciones anónimas.
+
+Las expresiones de función se utilizan para llamarlas en cualquier momento del programa. Se pueden crear sobre la marcha.</p>
+<code>var age = 12;
+
+if (age <= 18) {
+var summerPlace = function () {
+return “EuroDisney”;
+};
+console.log(summerPlace());
+}</code>
+
+<p>Las declaraciones de funcion no se puden crear sobre la marcha; no se pueden colocar en bloques.</p>
+
+<h2>¿Qué es la palabra clave “this” en JS?</h2>
+
+<p>Consideremos la palabra “run”. “Run” es una sola palabra que puede significar muchas cosas diferentes según el contexto.<p>
+
+<p>“I will run home” – “Correré a casa”: significa moverse rápidamente a pie
+“She ran the 1500m” – Ella corrió los 1500 m" - significa correr en una carrera
+“He is running for president” – “Se presenta a presidente”. Significa que quiere un puesto oficial.
+“The app is running” – “La aplicación se está ejecutando”: significa que la aplicación de software aún está abierta y activa.
+“Go for a run” – “Sal a correr”: significa correr como una forma de ejercicio.
+etc…</p>
+
+<p>Ocurre algo similar con el uso de la palabra clave this en tu código de JavaScript. Cuando lo haces, se resuelve automáticamente en un objeto o enlace según el contexto en el que se definió.
+
+¿Cuáles son los posibles contextos? ¿Y cómo podemos usar esa información para deducir a qué objeto se referirá una llamada con this?</p>
+
+<p><b>Contexto this</p></b>
+
+<p>Cuando se usa en una función, this simplemente apunta a un objeto al que está vinculado. Responde a la pregunta “de dónde debería obtener algún valor o datos”:</p>
+
+<code>function alert() {
+console.log(this.nombre + ’ esta llamando’);
+}</code>
+
+<p>En la función anterior, la palabra clave this se refiere a un objeto al que está vinculado y obtiene la propiedad “nombre” de allí.</p>
+
+<p>Pero, ¿cómo saber a qué objeto está vinculada la función? ¿Cómo averiguas a qué se refiere this?
+Para hacerlo, necesitamos echar un vistazo detallado a cómo las funciones están vinculadas a los objetos.</p>
+
+<h3>Tipos de enlaces en JavaScript<h3>
+
+<p>Por lo general, existen cuatro tipos de enlaces<p>
+<ul>
+<li>Por defecto (predeterminada)</li>
+<li>implícito</li>
+<li>explícito</li>
+<li>de constructor</li>
+</ul>
+<p>Enlace por defecto en JavaScript</p>
+
+<p>Una de las primeras reglas que hay que recordar es que si la función que contiene esta referencia this es una función independiente, esa función está vinculada al objeto global/p>.
+
+<code>unction alert() {
+console.log(this.nombre + ’ esta llamando’);
+}
+const nombre = ‘Kingsley’;
+alert();</code>
+
+<p>Salida: Kingsley esta llamando</p>
+
+<p>Función independiente</p>
+
+<p>nombre() es una función independiente y no adjunta a un objeto, por lo que está vinculada al ámbito global. Como resultado, la referencia this.nombre se resuelve en la variable global const nombre = ‘Kingsley’.</p>
+
+p>Sin Embargo, esta regla no se cumple si nombre() se definiera en modo estricto (strict mode):</p>
+
+<code>function alert() {
+‘use strict’;
+console.log(this.nombre + ’ esta llamando’);
+}
+
+const nombre = ‘Kingsley’;
+alert();</code>
+
+<p>Salida; TypeError: this is undefined</p>
+
+<p>undefined en mode estricto
+
+Cuando se establece como “strict mode”, this es “undefined”.</p>
+
+<h3>Enlace implícito en JavaScript</h3>
+
+<p>Otro escenario a tener en cuenta es si la función está adjunta a un objeto (su contexto) cuando se la llama.
+De acuerdo con la regla de vinculación en JavaScript, una función puede usar un objeto como contexto solo si ese objeto está vinculado a él en la llamada. Esta forma de vinculación se conoce como vinculación implícita.
+Esto es lo que quiero decir:</p>
+
+<code>function alert() {
+console.log(this.edad + ’ anyos’);
+}
+
+const miObjecto = {
+edad: 22,
+alert: alert
+}
+miObjeto.alert()</code>
+
+<p></p>Salida: 22 anyos</p>
+
+<p>Cuando llamas a una función usando el punto, this está implícitamente vinculado al objeto desde el que se llama a la función.
+En este ejemplo, dado que alert es llamada desde miObjeto, la palabra clave this está vinculada a miObjeto. Cuando llamamos a alert con miObjeto.alert(), this.edad es 22, siendo edad una propiedad de miObjeto.
+Una manera fácil de averiguar a qué objeto está implícitamente vinculado this es mirar qué objeto está a la izquierda del punto (.):</p>
+
+<code>function alert() {
+console.log(this.edad + ’ anyos’);
+}
+const miObjeto = {
+edad: 22,
+alert: alert,
+anidacionObj: {
+edad: 26,
+alert: alert
+}
+}
+miObjeto.alert();</code>
+
+<p>salida: this vinculada a miObjeto – 22 anyos</p>
+
+<code>miObjeto.anidacionObj.alert();</code>
+
+<p<Salida:this vinculada a anidacionObj – 26 anyos</p>
+
+<h3>Enlace explícito en JavaScript</h3>
+
+<p>La vinculación implícita tiene que ver con la relación con un objeto.</p>
+
+<p>Si queremos forzar a una función a usar un objeto como contexto sin poner una referencia de función de propiedad en el objeto,tenemos dos métodos para lograr esto: call() y apply().
+
+Para vincular explícitamente una llamada de función a un contexto, simplemente tienes que invocar la llamada () en esa función y pasar el objeto de contexto como parámetro:</p>
+
+<code>function alert() {
+console.log(this.edad + ’ anyos’);
+}
+
+const miObjeto = {
+edad: 22
+}
+alert.call(miObjeto);</code>
+
+<p>Salida: 22 anyos</p>
+
+<p>Incluso si tuvieras que pasar esa función varias veces a nuevas variables (currying), cada invocación usará el mismo contexto porque se ha unido (vinculado explícitamente) a ese objeto. Esto se llama vinculación dura</p>.
+
+<code>function alert() {
+console.log(this.edad);
+}
+const miObjeto = {
+edad: 22
+};
+const bar = function() {
+alert.call(miObjeto);
+};
+bar();</code>
+
+<p>Salida: 22</p>
+<code>setTimeout(bar, 100);</code>
+
+<p>salida: 22</p>
+
+<p>Una bar con vinculacion dura ya no puede tener su this cambiad/p>
+
+<code>bar.call(window);</code>
+
+<p>sigue siendo 22</p>
+
+<h3>Enlace de Constructor en JavaScript</h3>
+
+<p>El úlitmo tipo de enlace es el nuevo enlace que también acentúa el comportamiento inusual de JavaScript en comparación con otros lenguajes basados en clases.
+Cuando se invoca una función con la palabra clave new, también conocida como llamada de constructor, ocurre lo siguiente:</p>
+
+<p>Se crea (o construye) un objeto nuevo
+El objeto recién construido es vinculado a [[Prototype]] a la función que lo construyó
+El objeto recién construido se establece como enlace this para esa llamada de función.</p>
+
+<code<function darEdad(edad) {
+this.edad = edad;
+}
+const bar = new darEdad(22);
+console.log(bar.edad);</code>
+
+<p<Salida: 22<p>
+
+<p>Al llamar darEdad(…) con new, hemos creado un objeto nuevo y configurado ese object nuevo como this para la llamada bar(…).</p>
+</body>
+</html>

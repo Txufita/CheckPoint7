@@ -1,8 +1,11 @@
 .body {
     font-family: Arial, sans-serif;
     font-size: 20px;
-    color: #3498db;
-    font-weight: bold;
+    background-color: #3498db;
     text-align: center;
+}
+
+p { line-height: 1.5; 
   }
+
   

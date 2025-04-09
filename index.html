@@ -174,14 +174,14 @@ str.endsWith(‘dog’);</code>
 
 <code>var str = “los domingos hago los deberes”;
 
-str.repeat(59);<code>
+str.repeat(59);</code>
 
-<p<Salida:“los domingos hago los debereslos domingos hago los debereslos domingos hago los debereslos domingos hago los debereslos domingos hago los deberes”</p>
+<p>Salida:“los domingos hago los debereslos domingos hago los debereslos domingos hago los debereslos domingos hago los debereslos domingos hago los deberes”</p>
 
 <p>Repite el “string” tantas veces como queramos.
 Una vez mas, el valos de la variable no cambia, solo la funcion nos devuelve un set de valores diferentes, pero el “string” sigue manteniendo su valor. Si queremos utilizar el valor/valores que la funcion nos devuelve, debemos almacenar ese resultado en una variable nueva.</p>
 
-<h3>MATCH</h2>
+<h3>MATCH</h3>
 
 <p>Se utiliza con “Regular Expressions” para sobre todo para validar “webforms”</p>
 
@@ -192,7 +192,7 @@ Una vez mas, el valos de la variable no cambia, solo la funcion nos devuelve un 
 
 <code>var str = “los domingos hago los deberes”;
 
-str.replace(“domingos”, “sabados”);>/code> <p>=> "domingos es el elemento que bucamos, y “sabados” el elemento por el que loqueremos cambiar.</p>
+str.replace(“domingos”, “sabados”);</code> <p>=> "domingos es el elemento que bucamos, y “sabados” el elemento por el que loqueremos cambiar.</p>
 
 <p>Sustituye un elemento por otro del “string”.</p>
 
@@ -399,14 +399,14 @@ ageVerification(16);</code>
 
 <h2>¿Cuál es la diferencia entre una declaración de función y una expresión de función?</h2>
 
-<h3>Una declaración de función:
+<h3>Una declaración de función:</h3>
 
 <code>function domingoDos(){
 return "Hoy tocan mas deberes";
 }</code>
 <h3>Una expresión de función es una funcion que se almacena en una variable:</h3>
 
-<code></code>var domingo = function () {
+<code>var domingo = function () {
 return 'Hoy toca deberes';
 };</code>
 
@@ -441,7 +441,7 @@ etc…</p>
 
 ¿Cuáles son los posibles contextos? ¿Y cómo podemos usar esa información para deducir a qué objeto se referirá una llamada con this?</p>
 
-<p><b>Contexto this</p></b>
+<p><b>Contexto this</b></p>
 
 <p>Cuando se usa en una función, this simplemente apunta a un objeto al que está vinculado. Responde a la pregunta “de dónde debería obtener algún valor o datos”:</p>
 
@@ -454,9 +454,9 @@ console.log(this.nombre + ’ esta llamando’);
 <p>Pero, ¿cómo saber a qué objeto está vinculada la función? ¿Cómo averiguas a qué se refiere this?
 Para hacerlo, necesitamos echar un vistazo detallado a cómo las funciones están vinculadas a los objetos.</p>
 
-<h3>Tipos de enlaces en JavaScript<h3>
+<h3>Tipos de enlaces en JavaScript</h3>
 
-<p>Por lo general, existen cuatro tipos de enlaces<p>
+<p>Por lo general, existen cuatro tipos de enlaces</p>
 <ul>
 <li>Por defecto (predeterminada)</li>
 <li>implícito</li>
@@ -479,7 +479,7 @@ alert();</code>
 
 <p>nombre() es una función independiente y no adjunta a un objeto, por lo que está vinculada al ámbito global. Como resultado, la referencia this.nombre se resuelve en la variable global const nombre = ‘Kingsley’.</p>
 
-p>Sin Embargo, esta regla no se cumple si nombre() se definiera en modo estricto (strict mode):</p>
+<p>Sin Embargo, esta regla no se cumple si nombre() se definiera en modo estricto (strict mode):</p>
 
 <code>function alert() {
 ‘use strict’;

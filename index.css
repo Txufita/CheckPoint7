@@ -1,16 +1,26 @@
 .body {
-    font-family: Arial, sans-serif;
-    font-size: 20px;
-    background-color: #3498db;
-    text-align: center;
+font-family: Arial, sans-serif;
+ text-align: center;
 }
 
-p { line-height: 1.5; 
-  }
+p {
+font-size: 18px; 
+color: #333; 
+line-height: 1.5; 
+margin: 10px 0; }
 
-  h1, h2, h3 {
-    margin-top: 20px; 
-    margin-bottom: 20px; 
-    padding-top: 10px; 
-    padding-bottom: 10px; 
+h1, h2, h3 {
+font-size: 22px; 
+margin-top: 20px; 
+margin-bottom: 20px; 
+padding-top: 10px; 
+padding-bottom: 10px; 
 }
+
+code {
+background-color: #f4f4f4; 
+border: 1px solid #ddd;
+border-radius: 4px;
+padding: 2px 4px; 
+font-family: 'Courier New', Courier, monospace;
+color: #d63384; }
